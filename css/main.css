@@ -5,26 +5,32 @@
 
 /* The following CSS code allows a smooth scroll behavior once a link is clicked */
 
-scroll-behavior: smooth;
+html {
+	scroll-behavior: smooth;
+}
 
 #section1 {
   height: 250;
   background-color: #eef0fc;
+  scroll-behavior: smooth;
 }
 
 #section2 {
   height: 375;
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 #section3 {
   height: 500;
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 #section4 {
   height: 200;
   background-color: white;
+  scroll-behavior: smooth;
 }
 
 /* Allows to reset to the default properties*/
@@ -278,7 +284,7 @@ scroll-behavior: smooth;
 
 .bardiv {
   display: block;
-  height: 320px;
+  height: 380px;
   width: 69%;
   margin-left: 200px;
   margin-right: 250px;
@@ -344,6 +350,12 @@ scroll-behavior: smooth;
   margin-left: 18px;
 }
 
+.contact {
+  display: block;
+  height: 150px;
+  background-color: #eef0fc;
+}
+
 #phrase {
   font-family: "Playfair Display", serif;
   font-style: italic;
@@ -368,3 +380,5 @@ scroll-behavior: smooth;
   bottom: 55px;
  position: relative;
 }
+
+
