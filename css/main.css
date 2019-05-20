@@ -138,7 +138,7 @@ scroll-behavior: smooth;
 
 .sidebar h4 {
   padding-top: 8px;
-  padding-bottom: 16px;
+  padding-bottom: 19px;
   line-height: 1.8;
   font-family: Futura Light;
   font-weight: 100;
@@ -146,43 +146,6 @@ scroll-behavior: smooth;
   letter-spacing: 1px;
 }
 
-/* Social media icons */
-
-/* Facebook */
-.fa-facebook {
-  background: #5569dc;
-  color: white;
-  margin-left: 8px;
-  margin-right: 8px;
-  text-decoration: none;
-}
-
-/* Twitter */
-.fa-twitter {
-  background: #5569dc;
-  color: white;
-  margin-left: 8px;
-  margin-right: 8px;
-  text-decoration: none;
-}
-
-/* LinkedIn */
-.fa-linkedin {
-  background: #5569dc;
-  color: white;
-  margin-left: 8px;
-  margin-right: 8px;
-  text-decoration: none;
-}
-/* Instagram */
-.fa-instagram {
-  background: #5569dc;
-  color: white;
-  margin-left: 8px;
-  margin-right: 8px;
-  padding-bottom: 14px;
-  text-decoration: none;
-}
 
 /* customize the button*/
 .btn {
@@ -190,8 +153,10 @@ scroll-behavior: smooth;
   color: #5569dc;
   text-align: center;
   display: inline-block;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 14px;
+  padding-left: 14px;
   font-size: 14px;
   font-family: Futura Light;
 }
@@ -236,7 +201,7 @@ scroll-behavior: smooth;
   display: block;
   height: 375px;
   padding-top: 18px;
-  padding-bottom: 18px;
+  padding-bottom: 12px;
   position: relative;
 }
 
@@ -253,8 +218,8 @@ scroll-behavior: smooth;
   width: 400px;
   direction: rtl;
   text-align: left;
-  margin-right: 28px;
-  margin-left: 190px;
+  margin-right: 200px;
+  margin-left: 200px;
   display: inline-block;
   position: absolute;
   bottom: 80px;
@@ -313,7 +278,7 @@ scroll-behavior: smooth;
 
 .bardiv {
   display: block;
-  height: 500px;
+  height: 400px;
   width: 69%;
   margin-left: 200px;
   margin-right: 250px;
@@ -342,13 +307,10 @@ scroll-behavior: smooth;
   width: 90%;
 }
 .javascript {
-  width: 45%;
+  width: 85%;
 }
 .php {
-  width: 70%;
-}
-.sql {
-  width: 60%;
+  width: 90%;
 }
 
 .bardiv h1 {
@@ -357,7 +319,7 @@ scroll-behavior: smooth;
   font-family: "Playfair Display", serif;
   font-style: italic;
   font-size: 32px;
-  padding-top: 12px;
+  padding-top: 0px;
   padding-bottom: 4px;
   padding-right: 350px;
   margin-left: 18px;
@@ -465,7 +427,7 @@ hr {
 
 .contact {
   display: block;
-  height: 200px;
+  height: 150px;
   background-color: #eef0fc;
 }
 
@@ -478,34 +440,20 @@ hr {
   padding-top: 18px;
 }
 
-.contact > .fa-twitter {
-  color: black;
-  background-color: #eef0fc;
-  text-decoration: none;
-  font-size: 20px;
+#button {
+  color: white;
+  background-color: #5569dc;
+  text-align: center;
+  display: inline-block;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-right: 14px;
+  padding-left: 14px;
+  font-size: 14px;
+  font-family: Futura Light;
+  margin-left: 1000px;
+  bottom: 55px;
+ position: relative;
 }
 
-.contact > .fa-instagram {
-  color: black;
-  background-color: #eef0fc;
-  text-decoration: none;
-  font-size: 20px;
-}
 
-.contact > .fa-facebook {
-  color: black;
-  background-color: #eef0fc;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.contact > .fa-linkedin {
-  color: black;
-  background-color: #eef0fc;
-  text-decoration: none;
-  font-size: 20px;
-
-  /* we are using margin left on the linkedIn icon only so we can move all the links at once */
-  margin-left: 195px;
-  padding-top: 30px;
-}
