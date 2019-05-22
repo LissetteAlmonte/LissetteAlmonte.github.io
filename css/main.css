@@ -282,10 +282,11 @@ html {
 }
 
 #section3 {
-    width:70%;     
+        width:68%;     
     background-color: white;     
     font-weight:bold;
     padding-bottom: 30px; 
+  padding-top: 20px;
   
      
 
