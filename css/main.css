@@ -1,383 +1,561 @@
-/* New fonts imported from Google Fonts */
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i,900,900i");
-
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-
-/* The following CSS code allows a smooth scroll behavior once a link is clicked */
-
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+  width: 100%;
+  height: 100%;
+  
+  background:
+	linear-gradient(
+		cyan,
+		transparent
+	),
+	linear-gradient(
+		-45deg,
+		magenta,
+		transparent
+	),
+	linear-gradient(
+		45deg,
+		yellow,
+		transparent
+	);
+	background-blend-mode: multiply;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+mark {
+	background-color: transparent;
+	color: inherit
+}
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0
+}
+input,
+select,
+textarea {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	-ms-appearance: none;
+	appearance: none
+}
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+strong {
+	color: inherit;
+	font-weight: bolder;
+}
+em {
+	font-style: italic;
+}
+code {
+	font-family: "Lucida Console", "Courier New", monospace;
+	font-weight: normal;
+	text-indent: 0;
+	letter-spacing: 0;
+	font-size: 0.9em;
+	margin: 0 0.25em;
+	padding: 0.25em 0.5em;
+	background-color: rgba(144, 144, 144, 0.25);
+	border-radius: 0.25em;
+}
+mark {
+	background-color: rgba(144, 144, 144, 0.25);
+}
+a {
+	-moz-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	-webkit-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	-ms-transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	transition: color 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+	color: inherit;
+	text-decoration: underline;
+}
+s {
+	text-decoration: line-through;
+}
 html {
-	scroll-behavior: smooth;
+	font-size: 18pt;
 }
-
-#section1 {
-  height: 250;
-  background-color: #eef0fc;
-  scroll-behavior: smooth;
+#wrapper {
+	-webkit-overflow-scrolling: touch;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-flex-direction: column;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	min-height: 100vh;
+	position: relative;
+	z-index: 2;
 }
-
-#section2 {
-  height: 375;
-  background-color: white;
-  scroll-behavior: smooth;
+#main {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	position: relative;
+	max-width: 100%;
+	z-index: 1;
+	-moz-align-items: center;
+	-webkit-align-items: center;
+	-ms-align-items: center;
+	align-items: center;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	overflow: hidden;
+	text-align: center;
+	-moz-transition: opacity 1s ease-in-out 0s;
+	-webkit-transition: opacity 1s ease-in-out 0s;
+	-ms-transition: opacity 1s ease-in-out 0s;
+	transition: opacity 1s ease-in-out 0s;
 }
-
-#section3 {
-  height: 500;
-  background-color: white;
-  scroll-behavior: smooth;
+#main > .inner {
+	overflow-x: hidden;
+	width: 48rem;
+	max-width: 100%;
+	padding: 2.5rem 2rem;
 }
-
-#section4 {
-  height: 200;
-  background-color: white;
-  scroll-behavior: smooth;
+#main > .inner > header {
+	margin-bottom: 1.5rem;
 }
-
-/* Allows to reset to the default properties*/
-* {
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0;
-  box-sizing: border-box;
+#main > .inner > footer {
+	margin-top: 1.5rem;
 }
-
-.info-slide {
-  /* set the size of each box */
-  display: block;
-  width: auto;
-  height: 520px;
-  padding-top: 250px;
-  padding-right: 0px;
-  padding-bottom: 0px;
-  padding-left: 45px;
-
-  /* set background  */
-  background: url("https://lh3.googleusercontent.com/R2lR-GujnDQVgqujdNNASDw16tCnD-nJoSUhBRh8SEjbxdqPeb9yb8-gU7EO3e462nKVhXJPss6XCdIeaQQ2l0QA3rE066hk2kkMDwGw6fLretmByZLkN5FKtt8sYd33AbQbVOnr=w2400");
-  background-repeat: no-repeat;
-  background-position: left;
+#main > .inner > * > * {
+	margin-top: 1.5rem;
+	margin-bottom: 1.5rem;
 }
-
-/* set all text content for the slide to be white and vertically one onafter another */
-
-.info-slide > * {
-  display: block;
-  margin: 16px;
-  color: white;
+#main > .inner > * >:first-child {
+	margin-top: 0 !important;
 }
-
-/* make title text bigger */
-.info-slide > span:first-child {
-  font-size: 32px;
-  font-family: Futura;
-  letter-spacing: 4px;
+#main > .inner > * >:last-child {
+	margin-bottom: 0 !important;
 }
-
-.info-slide > span:last-child {
-  font-size: 32px;
-  font-family: "Playfair Display", serif;
+#main > .inner > * > .image {
+	margin-top: 1.875rem;
+	margin-bottom: 1.875rem;
 }
-
-.info-slide > span:nth-of-type(2) {
-  font-family: "Playfair Display", serif;
-  font-size: 350%;
-  font-weight: bold;
+#main > .inner > * > .video {
+	margin-top: 1.875rem;
+	margin-bottom: 1.875rem;
 }
-
-/* Format navigation bar */
-/* Remove the bullets and the margins and padding from lists */
-.nav > ul {
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden;
-  background-color: #5569dc;
-  padding-left: 120px;
-  padding-right: 0px;
+body.is-loading #main {
+	opacity: 0;
 }
-/* display: inline; lines all the links together side by side */
-.nav li {
-  display: inline;
+#main > .inner > section {
+	-moz-transition: opacity 0.75s ease-in-out 0.375s, min-height 0.375s ease-in-out, max-height 0.375s ease-in-out;
+	-webkit-transition: opacity 0.75s ease-in-out 0.375s, min-height 0.375s ease-in-out, max-height 0.375s ease-in-out;
+	-ms-transition: opacity 0.75s ease-in-out 0.375s, min-height 0.375s ease-in-out, max-height 0.375s ease-in-out;
+	transition: opacity 0.75s ease-in-out 0.375s, min-height 0.375s ease-in-out, max-height 0.375s ease-in-out;
 }
-
-/* Decoration/properties of text (or links) of navigation bar */
-.nav li a {
-  display: inline-block;
-  color: white;
-  text-align: center;
-  padding: 18px 18px;
-  text-decoration: none;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  background-color: #5569dc;
+#main > .inner > section.inactive {
+	-moz-transition: opacity 0.375s ease-in-out;
+	-webkit-transition: opacity 0.375s ease-in-out;
+	-ms-transition: opacity 0.375s ease-in-out;
+	transition: opacity 0.375s ease-in-out;
+	opacity: 0;
 }
-/* constructs overall format of sidebar */
-.sidebar {
-  display: block;
-  position: relative;
-  float: right;
-  background-color: #5569dc;
-  text-align: center;
-  width: 300px;
-  height: 520px;
-  bottom: 520px;
+h1 br + br,
+p br + br {
+	display: block;
+	content: ' ';
 }
-
-/* Formats professional photo into a circle */
-#ProfilePic {
-  width: 54%;
-  border-radius: 50%;
-  display: block;
-  /* margins are on auto in order to keep photo in the middle */
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 8px;
-  padding-bottom: 8px;
+#text01 br + br {
+	margin-top: 0.825rem;
 }
-/* customizes the formating of my name */
-.sidebar h1 {
-  color: white;
-  padding-top: 16px;
-  padding-bottom: 8px;
-  font-family: "Playfair Display", serif;
-  font-size: 32px;
+#text01 {
+	text-transform: uppercase;
+	color: #000000;
+	font-family: 'Playfair Display';
+	letter-spacing: 0.325rem;
+	width: calc(100% + 0.325rem);
+	font-size: 2.5em;
+	line-height: 1.375;
+	font-weight: 400;
 }
-
-.sidebar h4 {
-  padding-top: 8px;
-  padding-bottom: 19px;
-  line-height: 1.8;
-  font-family: Futura Light;
-  font-weight: 100;
-  color: white;
-  letter-spacing: 1px;
+#text04 br + br {
+	margin-top: 0.975rem;
 }
-
-
-/* customize the button*/
-.btn {
-  background-color: white;
-  color: #5569dc;
-  text-align: center;
-  display: inline-block;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-right: 14px;
-  padding-left: 14px;
-  font-size: 14px;
-  font-family: Futura Light;
+#text04 {
+	color: #000000;
+	font-family: 'Playfair Display';
+	font-size: 1em;
+	line-height: 1.625;
+	font-weight: 400;
 }
-
-.about {
-  display: block;
-  background-color: #eef0fc;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  height: 250px;
+#text05 br + br {
+	margin-top: 0.825rem;
 }
-
-.about h1 {
-  color: #5569dc;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 32px;
-  margin-right: 200px;
-  margin-left: 225px;
-  padding-top: 30px;
+#text05 {
+	text-transform: uppercase;
+	color: #000000;
+	font-family: 'Playfair Display';
+	letter-spacing: 0.325rem;
+	width: calc(100% + 0.325rem);
+	font-size: 1.5em;
+	line-height: 1.375;
+	font-weight: 400;
 }
-.about h4 {
-  color: #5569dc;
-  font-family: Futura Light;
-  font-weight: 200;
-  margin-right: 200px;
-  margin-left: 220px;
-  padding-top: 8px;
-  padding-bottom: 16px;
-  letter-spacing: 2px;
+#text02 br + br {
+	margin-top: 0.975rem;
 }
-.about p {
-  font-size: 18px;
-  font-family: Futura Light;
-  font-weight: 200;
-  margin-right: 200px;
-  margin-left: 220px;
-  padding-bottom: 30px;
+#text02 {
+	color: #000000;
+	font-family: 'Playfair Display';
+	font-size: 1em;
+	line-height: 1.625;
+	font-weight: 400;
 }
-
-#section2 {
-  display: block;
-  height: 320px;
-  padding-top: 18px;
-  padding-bottom: 20px;
-  position: relative;
-  
+#text07 br + br {
+	margin-top: 0.825rem;
 }
-
-.Education {
-  width: 450px;
-  float: left;
-  display: block;
-  margin-right: 1px;
-  margin-left: 220px;
+#text07 {
+	text-transform: uppercase;
+	color: #000000;
+	font-family: 'Playfair Display';
+	letter-spacing: 0.325rem;
+	width: calc(100% + 0.325rem);
+	font-size: 1.5em;
+	line-height: 1.375;
+	font-weight: 400;
 }
-
-.Experience {
-  width: 400px;
-  direction: rtl;
-  text-align: left;
-  margin-right: 200px;
-  margin-left: 200px;
-  display: inline-block;
-  position: absolute;
-  right: 0px;
-  
+#text08 br + br {
+	margin-top: 0.975rem;
 }
-
-.Education h1 {
-  color: #5569dc;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 32px;
-  padding-top: 0px;
+#text08 {
+	color: #000000;
+	font-family: 'Playfair Display';
+	font-size: 1em;
+	line-height: 1.625;
+	font-weight: 400;
 }
-
-.Education h3 {
-  color: #5569dc;
-  font-family: Futura Light;
-  font-weight: 200;
-  letter-spacing: 2px;
-  padding-bottom: 28px;
+#text03 br + br {
+	margin-top: 0.825rem;
 }
-
-.Experience h1 {
-  color: #5569dc;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 32px;
-  padding-top: 0px;
+#text03 {
+	text-transform: uppercase;
+	color: #000000;
+	font-family: 'Playfair Display';
+	letter-spacing: 0.325rem;
+	width: calc(100% + 0.325rem);
+	font-size: 1.5em;
+	line-height: 1.375;
+	font-weight: 400;
 }
-
-.Experience h3 {
-  color: #5569dc;
-  font-family: Futura Light;
-  font-weight: 200;
-  letter-spacing: 2px;
-  padding-bottom: 28px;
+#text06 br + br {
+	margin-top: 0.975rem;
 }
-.year {
-  font-family: Futura Light;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.6;
-  list-style-type: none;
+#text06 {
+	color: #000000;
+	font-family: 'Playfair Display';
+	font-size: 1em;
+	line-height: 1.625;
+	font-weight: 400;
 }
-
-.description {
-  display: block;
-  font-family: Futura Light;
-  font-weight: 200;
-  font-size: 16;
-  line-height: 2;
-  list-style-type: none;
-  padding-bottom: 8px;
+.icons {
+	cursor: default;
+	padding: 0;
+	letter-spacing: 0;
 }
-
-#section3 {
-        width:68%;     
-    background-color: white;     
-    font-weight:bold;
-    padding-bottom: 30px; 
-  padding-top: 20px;
-  
-     
-
+.icons li {
+	display: inline-block;
+	vertical-align: middle;
 }
-.progressbar {
-  width: 100%;
-  height: 5px;
-  background-color: #aaa;
-  position: relative;
-  margin-bottom: 15px;
-  margin-left: 18px;
-  margin-right: 0;
+.icons li a {
+	display: block;
+	color: inherit;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 0;
 }
-.progressbar span {
-  height: 5px;
-  background-color: #5569dc;
-  z-index: 888;
-  position: absolute;
-  top: 0px;
-  left: 0px;
+.icons li a .label {
+	display: none;
 }
-.html {
-  width: 100%;
+#icons01 {
+	font-size: 1.5em;
+	width: calc(100% + 1.5rem);
+	margin-left: -0.75rem;
 }
-.css {
-  width: 90%;
+#icons01 li {
+	margin: 0.75rem;
 }
-.javascript {
-  width: 85%;
+#icons01 .n01 {
+	color: #000000;
 }
-.php {
-  width: 90%;
+#icons01 .n02 {
+	color: #000000;
 }
-
-.bardiv h1 {
-  display: inline-block;
-  color: #5569dc;
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 32px;
-  margin-left: 18px;
+#icons01 .n03 {
+	color: #000000;
 }
-
-.bardiv h4 {
-  color: #5569dc;
-  font-family: Futura Light;
-  font-weight: 200;
-  padding-top: 0px;
-  padding-bottom: 16px;
-  letter-spacing: 2px;
-  margin-left: 18px;
+#icons01 .n04 {
+	color: #000000;
 }
-
-.bardiv h3 {
-  color: #5569dc;
-  font-family: Futura Light;
-  font-weight: bold;
-  padding-top: 8px;
-  padding-bottom: 16px;
-  margin-left: 18px;
+#icons01 .n05 {
+	color: #000000;
 }
-
-.contact {
-  display: block;
-  height: 160px;
-  background-color: #eef0fc;
+hr {
+	width: 100%;
+	position: relative;
+	padding: 0;
+	border: 0;
 }
-
-#phrase {
-  font-family: "Playfair Display", serif;
-  font-style: italic;
-  font-size: 32px;
-  margin-right: 0px;
-  margin-left: 200px;
-  padding-top: 18px;
+hr:before {
+	content: '';
+	display: inline-block;
+	vertical-align: middle;
 }
-
-#button {
-  color: white;
-  background-color: #5569dc;
-  text-align: center;
-  display: inline-block;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-right: 14px;
-  padding-left: 14px;
-  font-size: 14px;
-  font-family: Futura Light;
-  margin-left: 1000px;
-  bottom: 55px;
- position: relative;
+#divider01 {
+	height: 1rem;
+	line-height: 1rem;
 }
-
-
+#divider01:before {
+	width: 15%;
+	background-color: #000000;
+	height: 1px;
+}
+.buttons {
+	cursor: default;
+	padding: 0;
+	letter-spacing: 0;
+}
+.buttons li a {
+	text-decoration: none;
+	text-align: center;
+	white-space: nowrap;
+	max-width: 100%;
+}
+#buttons01 {
+	width: calc(100% + 1rem);
+	margin-left: -0.5rem;
+}
+#buttons01 li {
+	display: inline-block;
+	vertical-align: middle;
+	max-width: calc(100% - 1rem);
+	margin: 0.5rem;
+}
+#buttons01 li a {
+	display: block;
+	width: 8.125rem;
+	height: 2.625rem;
+	line-height: 2.625rem;
+	padding: 0 1.3125rem;
+	text-transform: uppercase;
+	font-size: 0.625em;
+	font-family: 'Playfair Display';
+	letter-spacing: 0.225rem;
+	padding-left: calc(0.225rem + 1.3125rem);
+	font-weight: 400;
+	border-radius: 0.375rem;
+}
+#buttons01 .n01 {
+	color: #000000;
+	border: solid 1px rgba(255, 255, 255, 0.169);
+}
+#buttons01 .n01:hover {
+	color: #000000;
+	border-color: #000000;
+}
+#buttons01 .n02 {
+	color: #000000;
+	border: solid 1px rgba(255, 255, 255, 0.169);
+}
+#buttons01 .n02:hover {
+	color: #000000;
+	border-color: #000000;
+}
+#buttons01 .n03 {
+	color: #000000;
+	border: solid 1px rgba(255, 255, 255, 0.169);
+}
+#buttons01 .n03:hover {
+	color: #000000;
+	border-color: #000000;
+}
+@media (max-width: 1680px) {
+	html {
+		font-size: 13pt;
+	}
+}
+@media (max-width: 1280px) {
+	html {
+		font-size: 13pt;
+	}
+}
+@media (max-width: 980px) {
+	html {
+		font-size: 11pt;
+	}
+}
+@media (max-width: 736px) {
+	html {
+		font-size: 11pt;
+	}
+	#main > .inner {
+		padding: 4rem 2rem;
+	}
+	#divider01 {
+		height: 1rem;
+		line-height: 1rem;
+	}
+}
+@media (max-width: 480px) {
+	#buttons01 li a {
+		width: 8.125rem;
+	}
+}
+@media (max-width: 360px) {
+	#main > .inner {
+		padding: 3rem 1.25rem;
+	}
+	#text01 {
+		font-size: 2em;
+	}
+	#icons01 {
+		width: calc(100% + 1.125rem);
+		margin-left: -0.5625rem;
+	}
+	#icons01 li {
+		margin: 0.5625rem;
+	}
+	#buttons01 {
+		width: calc(100% + 0.75rem);
+		margin-left: -0.375rem;
+	}
+	#buttons01 li {
+		max-width: calc(100% - 0.75rem);
+		margin: 0.375rem;
+	}
+}
